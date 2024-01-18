@@ -1,6 +1,6 @@
 name: Generate and Release
 
-on: 
+on:
   push:
     tags:
       - '*'
@@ -16,3 +16,5 @@ jobs:
       - uses: ncipollo/release-action@v1
         with:
           artifacts: 'dist/*.json'
+          artifactContentType: 'artifactContentType'
+          generateReleaseNotes: true
