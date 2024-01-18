@@ -1,0 +1,17 @@
+{
+  "name": "index-registry",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "generate": "bun src/generate.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "zod": "^3.22.4"
+  }
+}

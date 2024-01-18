@@ -1,0 +1,18 @@
+name: Generate and Release
+
+on: 
+  push:
+    tags:
+      - '*'
+
+jobs:
+  generate-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: oven-sh/setup-bun@v1
+      - run: bun install
+      - run: bun run generate
+      - uses: ncipollo/release-action@v1
+        with:
+          artifacts: 'dist/*.json'
